@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontak | Pixelart</title>
+  
+  <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #eef3ff;
+        color: #1f2a44;
+    }
+
+    .navbar {
+        background: #fff;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        color: #4a90e2;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-menu li {
+        cursor: pointer;
+        color: #666;
+    }
+
+    .nav-menu .active {
+        color: #4a90e2;
+    }
+
+    .nav-btn .btn {
+        padding: 8px 18px;
+        border-radius: 8px;
+        margin-left: 10px;
+    }
+
+    .login {
+        background: #4a90e2;
+        color: #fff;
+    }
+
+    .daftar {
+        background: #f5a623;
+        color: #fff;
+    }
+
+    .header {
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+
+    .header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    }
+
+    .header p {
+        color: #666;
+    }
+
+    .header span {
+        color: #4a90e2;
+    }
+
+    .contact {
+        padding: 40px 20px 80px;
+    }
+
+    .contact-container {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .contact-form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+
+    .contact-form h3 {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        outline: none;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #4a90e2;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #3b7fd1;
+    }
+
+    .contact-info {
+        background: #fff;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+
+    .contact-info h3 {
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        margin-bottom: 15px;
+    }
+
+    .info-item p {
+        color: #555;
+        font-size: 14px;
+    }
+
+    .primary {
+        display: block;
+        margin-top: 25px;
+        text-align: center;
+        padding: 12px;
+        background: #4a90e2;
+        color: #fff;
+        border-radius: 12px;
+        text-decoration: none;
+    }
+
+    .btn.primary {
+        cursor: pointer;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 36px;     
+        height: auto;
+    }
+
+    .brand {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .brand span {
+        color: #4a90e2;
+    }
+
+    @media (max-width: 900px) {
+        .contact-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+  </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="gambar/logo-pixel.png" alt="Pixelart Logo">
+                <span class="brand">PIXEL<span>ART</span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="Layanan.html">Layanan</a></li>
+                <li class="active"><a href="pemesanan.html">Pemesanan</a></li>
+                <li class="active"><a href="Contac.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-btn">
+                <a class="btn login">Masuk</a>
+                <a class="btn daftar">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="header">
+        <h1>📞 Hubungi Kami</h1>
+        <p>Kami siap membantu kebutuhan desain <span>bisnis</span> Anda.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="contact-container">
+
+            <!-- FORM -->
+            <div class="contact-form">
+                <h3>Form Kontak</h3>
+                <form>
+                    <label>Nama</label>
+                    <input type="text" placeholder="Nama Anda" required>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="email@contoh.com" required>
+
+                    <label>Subjek</label>
+                    <input type="text" placeholder="Judul pesan">
+
+                    <label>Pesan</label>
+                    <textarea rows="4" placeholder="Tulis pesan Anda"></textarea>
+
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+
+            <!-- INFO -->
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+
+                <div class="info-item">
+                    <strong>📧 Email</strong>
+                    <p>pixelart@email.com</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>📱 WhatsApp</strong>
+                    <p>+62 812-3456-7890</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>📍 Alamat</strong>
+                    <p>Tangerang Selatan, Banten</p>
+                </div>
+
+                <a class="btn primary">Chat WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

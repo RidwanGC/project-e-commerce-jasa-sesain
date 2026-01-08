@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pemesanan Desain | Pixelart</title>
+  
+  <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #eef3ff;
+        color: #1f2a44;
+    }
+
+    .navbar {
+        background: #fff;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        color: #4a90e2;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-menu li {
+        cursor: pointer;
+        color: #666;
+    }
+
+    .nav-menu .active {
+        color: #4a90e2;
+    }
+
+    .nav-btn .btn {
+        padding: 8px 18px;
+        border-radius: 8px;
+        margin-left: 10px;
+    }
+
+    .login {
+        background: #4a90e2;
+        color: #fff;
+    }
+
+    .daftar {
+        background: #f5a623;
+        color: #fff;
+    }
+
+    .order {
+        padding: 60px 20px;
+    }
+
+    .order-container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .order-form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+
+    .order-form h2 {
+        margin-bottom: 10px;
+    }
+
+    .order-form p {
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #4a90e2;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #3b7fd1;
+    }
+
+    .order-info {
+        background: #fff;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+
+    .order-info h3 {
+        margin-bottom: 15px;
+    }
+
+    .order-info ul {
+        list-style: none;
+        margin-bottom: 25px;
+    }
+
+    .order-info ul li {
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .highlight {
+        background: #eef5ff;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .highlight h4 {
+        margin-bottom: 5px;
+    }
+
+    .highlight p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .primary {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #4a90e2;
+        color: #fff;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .btn.primary {
+        cursor: pointer;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 36px;     
+        height: auto;
+    }
+
+    .brand {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .brand span {
+        color: #4a90e2;
+    }
+
+    @media (max-width: 900px) {
+        .order-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+  </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="gambar/logo-pixel.png" alt="Pixelart Logo">
+                <span class="brand">PIXEL<span>ART</span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="Layanan.html">Layanan</a></li>
+                <li class="active"><a href="pemesanan.html">Pemesanan</a></li>
+                <li class="active"><a href="Contac.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-btn">
+                <a class="btn login">Masuk</a>
+                <a class="btn daftar">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ORDER -->
+    <section class="order">
+        <div class="order-container">
+
+            <!-- FORM -->
+            <div class="order-form">
+                <h2>📝 Form Pemesanan Desain</h2>
+                <p>Isi data berikut untuk memesan layanan desain.</p>
+
+                <form>
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Nama Anda" required>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="email@contoh.com" required>
+
+                    <label>Jenis Desain</label>
+
+                    <select>
+                        <option>Desain Logo</option>
+                        <option>Desain Brosur</option>
+                        <option>Desain Media Sosial</option>
+                        <option>UI / UX Design</option>
+                        <option>Desain Kemasan</option>
+                    </select>
+
+                    <label>Deskripsi Kebutuhan</label>
+                    <textarea rows="4" placeholder="Jelaskan kebutuhan desain Anda"></textarea>
+
+                    <label>Deadline</label>
+                    <input type="date">
+
+                    <button type="submit">Kirim Pemesanan</button>
+                </form>
+            </div>
+
+            <!-- INFO -->
+            <div class="order-info">
+                <h3>📦 Informasi Layanan</h3>
+                <ul>
+                    <li>✔ Konsultasi gratis</li>
+                    <li>✔ Revisi sesuai paket</li>
+                    <li>✔ File siap cetak & digital</li>
+                    <li>✔ Support cepat</li>
+                </ul>
+
+                <div class="highlight">
+                    <h4>Butuh Cepat?</h4>
+                    <p>Hubungi kami untuk layanan express.</p>
+                    <a class="btn primary">Chat Admin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

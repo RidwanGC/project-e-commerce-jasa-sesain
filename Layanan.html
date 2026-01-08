@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Layanan Desain | Pixelart</title>
+
+  <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #eef3ff;
+        color: #1f2a44;
+    }
+
+    .navbar {
+        background: #fff;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        color: #4a90e2;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-menu li {
+        cursor: pointer;
+        color: #666;
+    }
+
+    .nav-menu .active {
+        color: #4a90e2;
+        border-bottom: none;
+    }
+
+    .nav-btn .btn {
+        padding: 8px 18px;
+        border-radius: 8px;
+        margin-left: 10px;
+    }
+
+    .login {
+        background: #4a90e2;
+        color: #fff;
+    }
+
+    .daftar {
+        background: #f5a623;
+        color: #fff;
+    }
+
+    .header {
+        text-align: center;
+        padding: 60px 20px 40px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .header p {
+        color: #666;
+    }
+
+    .header span {
+        color: #4a90e2;
+    }
+
+    .services {
+        padding: 40px 20px 80px;
+    }
+
+    .service-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .service-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .desc {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .service-card h4 {
+        margin-bottom: 15px;
+        color: #1f2a44;
+    }
+
+    .service-card ul {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .service-card ul li {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 6px;
+    }
+
+    .btn.primary {
+        margin-top: auto;
+        text-align: center;
+        padding: 12px;
+        background: #4a90e2;
+        color: #fff;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .btn.primary:hover {
+        background: #3b7fd1;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        background: #fff;
+        padding: 30px;
+        border-radius: 18px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        animation: scaleIn 0.3s ease;
+    }
+
+    .modal-content h2 {
+    margin-bottom: 10px;
+    }
+
+    .modal-content p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .modal-content button {
+        padding: 10px 20px;
+        border: none;
+        background: #4a90e2;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .modal-content button:hover {
+        background: #3b7fd1;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .service-card .btn.primary {
+        cursor: pointer;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 36px;     
+        height: auto;
+    }
+
+    .brand {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .brand span {
+        color: #4a90e2;
+    }
+
+    .service-img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 12px;
+    }
+
+    .service-card.horizontal {
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .service-card.horizontal .service-img {
+        width: 90px;
+        max-width: 90px;
+        margin: 0;
+    }
+
+    .service-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .service-content .btn.primary {
+        margin-top: auto;
+    }
+
+
+    @keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+        }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .service-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="gambar/logo-pixel.png" alt="Pixelart Logo">
+                <span class="brand">PIXEL<span>ART</span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="Layanan.html">Layanan</a></li>
+                <li class="active"><a href="pemesanan.html">Pemesanan</a></li>
+                <li class="active"><a href="Contac.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-btn">
+                <a class="btn login">Masuk</a>
+                <a class="btn daftar">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="header">
+        <h1>🎨 Layanan Desain Kami</h1>
+        <p>Berbagai layanan desain profesional untuk mendukung kebutuhan <span>bisnis</span> Anda.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="service-grid">
+
+            <div class="service-card">
+                <img src="gambar/logooo.png" alt="Desain Logo" class="service-img">
+
+                <div class="service-content">
+                    <h3>Desain Logo</h3>
+                    <p class="desc">Pembuatan logo profesional yang mencerminkan identitas dan karakter.</p>
+                    <h4>Mulai Rp 500.000</h4>
+                </div>   
+         
+                <ul>
+                    <li>3 konsep awal</li>
+                    <li>Revisi hingga 3x</li>
+                </ul>
+                <a class="btn primary" onclick="openModal()">Pesan Sekarang</a>
+            </div>
+
+            <div class="service-card">
+                <img src="gambar/bro.jpg" alt="Desain Logo" class="service-img">
+                <h3>Desain Brosur</h3>
+                <p class="desc">Desain brosur menarik untuk promosi produk atau perusahaan.</p>
+                <h4>Mulai Rp 350.000</h4>
+            <ul>
+                <li>Ukuran A4 / A5</li>
+                <li>Siap cetak & digital</li>
+            </ul>
+            <a class="btn primary" onclick="openModal()">Pesan Sekarang</a>
+            </div>
+
+            <div class="service-card">
+                <img src="gambar/sosmed.jpg" alt="Desain Logo" class="service-img">
+                <h3>Desain Media Sosial</h3>
+                <p class="desc">Konten visual kreatif untuk Instagram, Facebook, dan lainnya.</p>
+                <h4>Mulai Rp 50.000 / post</h4>
+            <ul>
+                <li>Feed & Story</li>
+                <li>Konsisten brand</li>
+            </ul>
+            <a class="btn primary" onclick="openModal()">Pesan Sekarang</a>
+            </div>
+
+            <div class="service-card">
+                <img src="gambar/nama.jpg" alt="Desain Logo" class="service-img">
+                <h3>Desain Kartu Nama</h3>
+                <p class="desc">Desain kartu nama profesional dan elegan.</p>
+                <h4>Mulai Rp 150.000</h4>
+            <ul>
+                <li>2 sisi</li>
+                <li>Siap cetak</li>
+            </ul>
+            <a class="btn primary" onclick="openModal()">Pesan Sekarang</a>
+            </div>
+
+            <div class="service-card">
+                <img src="gambar/gfx-school.jpg" alt="Desain Logo" class="service-img">
+                <h3>UI / UX Design</h3>
+                <p class="desc">Desain antarmuka website & aplikasi modern.</p>
+                <h4>Mulai Rp 1.000.000</h4>
+            <ul>
+                <li>Wireframe</li>
+                <li>Prototype</li>
+            </ul>
+            <a class="btn primary" onclick="openModal()">Pesan Sekarang</a>
+            </div>
+
+            <div class="service-card">
+                <img src="gambar/coffe.jpg" alt="Desain Logo" class="service-img">
+                <h3>Desain Kemasan</h3>
+                <p class="desc">Desain kemasan produk menarik dan siap produksi.</p>
+                <h4>Mulai Rp 750.000</h4>
+            <ul>
+                <li>Mockup 3D</li>
+                <li>Siap cetak</li>
+            </ul>
+            <a class="btn primary" onclick="openModal()">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="comingSoonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>🚧 Coming Soon</h2>
+            <p>Fitur pemesanan sedang dalam tahap pengembangan.<br>
+            Silakan hubungi kami melalui halaman <b>Kontak</b>.</p>
+            <button onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("comingSoonModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("comingSoonModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

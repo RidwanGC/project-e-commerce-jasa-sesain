@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixelart - Solusi Desain</title>
+  
+  <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #eef3ff;
+        color: #1f2a44;
+    }
+
+        .navbar {
+        background: #fff;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .logo span {
+        color: #4a90e2;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    .nav-menu li {
+        cursor: pointer;
+        color: #555;
+    }
+
+    .nav-menu .active {
+        color: #4a90e2;
+        border-bottom: none;
+    }
+
+    .nav-btn .btn {
+        padding: 8px 18px;
+        border-radius: 8px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .login {
+        background: #4a90e2;
+        color: #fff;
+    }
+
+    .daftar {
+        background: #f5a623;
+        color: #fff;
+    }
+
+    .hero {
+        width: 90%;
+        max-width: 1200px;
+        margin: 60px auto;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn .btn {
+        padding: 12px 22px;
+        border-radius: 10px;
+        margin-right: 15px;
+    }
+
+    .primary {
+        background: #4a90e2;
+        color: #fff;
+    }
+
+    .secondary {
+        background: #fff;
+        color: #4a90e2;
+        border: 1px solid #4a90e2;
+    }
+
+    .hero-img {
+        flex: 1;
+    }
+
+    .hero-img img {
+        width: 70%;
+    }
+
+    .features {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .feature-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .services {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .services h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .services p {
+        color: #666;
+        margin-bottom: 40px;
+    }
+
+    .service-grid {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .service-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .center {
+        display: inline-block;
+        margin-top: 40px;
+    }
+
+    .services .center {
+    padding: 16px 40px;  
+        border-radius: 12px;
+        font-size: 16px;
+        min-width: 200px;   
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 36px;     
+        height: auto;
+    }
+
+    .brand {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .brand span {
+        color: #4a90e2;
+    }
+
+  </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="gambar/logo-pixel.png" alt="Pixelart Logo">
+                <span class="brand">PIXEL<span>ART</span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="Layanan.html">Layanan</a></li>
+                <li class="active"><a href="pemesanan.html">Pemesanan</a></li>
+                <li class="active"><a href="Contac.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-btn">
+                <a class="btn login">Masuk</a>
+                <a class="btn daftar">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Solusi Desain Profesional<br>untuk Bisnis Anda</h1>
+            <p>
+            Dapatkan desain berkualitas tinggi yang disesuaikan dengan
+            kebutuhan bisnis Anda, cepat dan mudah.
+            </p>
+
+            <div class="hero-btn">
+                <a class="btn primary" cursor="pointer" href="Layanan.html">Mulai Sekarang</a>
+                <a class="btn secondary">▶ Lihat Portofolio</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="gambar/work.jpg" alt="Designer" >
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>💡 Designer Berpengalaman</h3>
+            <p>Tim desainer profesional siap mewujudkan ide Anda</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>⚡ Proses Cepat & Mudah</h3>
+            <p>Pesanan diproses cepat dan tepat waktu</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>💰 Harga Terjangkau</h3>
+            <p>Layanan berkualitas dengan harga bersaing</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🛡️ Jaminan Kepuasan</h3>
+            <p>Garansi revisi untuk hasil sempurna</p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <h2>Layanan Kami</h2>
+        <p>Kami menawarkan berbagai layanan desain untuk menunjang kesuksesan bisnis Anda.</p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Desain Logo</h4>
+                <p>Logo unik mencerminkan identitas bisnis Anda</p>
+            </div>
+
+            <div class="service-card">
+                <h4>Desain Brosur</h4>
+                <p>Brosur menarik untuk promosi produk</p>
+            </div>
+
+            <div class="service-card">
+                <h4>Desain Media Sosial</h4>
+                <p>Konten visual kreatif untuk media sosial</p>
+            </div>
+
+            <div class="service-card">
+                <h4>Desain Kemasan</h4>
+                <p>Kemasan menarik sesuai brand Anda</p>
+            </div>
+        </div>
+
+        <a class="btn primary center" href="Layanan.html">Lihat Semua Layanan Kami</a>
+    </section>
+
+</body>
+</html>
